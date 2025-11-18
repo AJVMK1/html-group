@@ -1,0 +1,118 @@
+/* Colors */
+:root {
+  --red: #e10600;
+  --grey: #9a9a9a;
+  --black: #0b0b0b;
+}
+
+/* Global */
+body {
+  margin: 0;
+  background: var(--black);
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #111;
+  padding: 0.6rem 1rem;
+  border-bottom: 2px solid var(--red);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Brand */
+.brand a {
+  color: var(--red);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Nav links */
+.nav-menu {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--grey);
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+  transition: 0.2s ease;
+}
+
+.nav-menu a:hover {
+  background: rgba(255, 0, 0, 0.15);
+  color: white;
+}
+
+/* HAMBURGER (CSS only) */
+.nav-toggle {
+  display: none;
+}
+
+/* Hamburger styling */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--grey);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* MOBILE STYLES */
+@media (max-width: 720px) {
+  .nav-menu {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: #111;
+    flex-direction: column;
+    width: 150px;
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 0.6rem;
+    border-radius: 8px;
+
+    /* Hide Menu */
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: 0.2s ease;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Show menu when checkbox checked */
+  .nav-toggle:checked ~ .nav-menu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  /* Animate lines into X */
+  .nav-toggle:checked + .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+  .nav-toggle:checked + .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-toggle:checked + .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+}
