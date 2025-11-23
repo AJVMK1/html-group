@@ -216,3 +216,78 @@ html, body {
   0% { top: -100%; }
   100% { top: 100%; }
 }
+
+
+/* PROFILE CARD */
+.profile-card {
+  background: #0b0b0b;
+  border: 1px solid rgba(255, 0, 0, 0.25);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.15);
+  overflow: hidden;
+  width: 100%;
+}
+
+.profile-card .card-title {
+  color: var(--red);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.profile-card .card-text {
+  color: #d0d0d0;
+  line-height: 1.4;
+}
+
+.profile-card {
+    text-align: center;        /* centers text + image container */
+}
+
+/* Image styling */
+.profile-card img {
+    width: 100%;
+    max-width: 280px;          /* makes images larger but not too large */
+    height: 280px;             /* equal height for all images */
+    object-fit: cover;         /* keeps images looking good */
+    display: block;
+    margin: 0 auto;            /* centers image */
+    border-radius: 12px;
+}
+
+
+
+/* Profile Button */
+.btn-red {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 0.6rem;
+  background: var(--red);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.25s ease;
+}
+
+.btn-red:hover {
+  background: #b00000;
+  box-shadow: 0 0 15px rgba(255,0,0,0.4);
+}
+
+/* GRID FOR TEAM CARDS */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+/* MOBILE: 1 CARD PER ROW */
+@media (max-width: 720px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
