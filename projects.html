@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,26 +8,100 @@
     <title>Home</title>
 </head>
 <body>
-    <header class="navbar">
-  <div class="brand">
-    <a href="index.html">Group 1</a>
-  </div>
 
-  <!-- Checkbox hack -->
-  <input type="checkbox" id="nav-toggle" class="nav-toggle">
-  <label for="nav-toggle" class="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </label>
+<header class="navbar">
+    <div class="brand">
+        <a href="index.html">Group 1</a>
+    </div>
 
-  <nav class="nav-menu">
-    <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="dev_team.html">Dev Team</a>
-  </nav>
+    <!-- Mobile Nav Toggle -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <nav class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="dev_team.html">Dev Team</a>
+    </nav>
 </header>
 
+
+<div class="cyber-terminal">
+<h3>Projects</h3>
+<p>
+Welcome to our Projects page! Here, you'll find a curated selection of our projects we made to explain a topic on fundamentals of Computing.
+</p>
+</div>
+
+
+
+
+
+
+<!-- CAROUSEL WRAPPER -->
+<div class="carousel">
+
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+        <button data-slide="0" class="active"></button>
+        <button data-slide="1"></button>
+        <button data-slide="2"></button>
+        <button data-slide="3"></button>
+        <button data-slide="4"></button>
+        <button data-slide="5"></button>
+    </div>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <a href="https://k06alv.github.io/Mass_Storage/" class="cyber-glitch">
+                <img src="mass_storage.png" alt="Mass Storage">
+            </a>
+        </div>
+
+        <div class="carousel-item">
+            <a href="andgate.html" class="cyber-glitch">
+                <img src="image_and.png" alt="AND Gate">
+            </a>
+        </div>
+
+        <div class="carousel-item">
+            <a href="binarytohex.html" class="cyber-glitch">
+                <img src="image_bin_hex.png" alt="Binary to Hex">
+            </a>
+        </div>
+
+        <div class="carousel-item">
+            <a href="ascii.html" class="cyber-glitch">
+                <img src="image_ascii.png" alt="ASCII Chart">
+            </a>
+        </div>
+
+        <div class="carousel-item">
+            <a href="unicode.html" class="cyber-glitch">
+                <img src="image_unicode.png" alt="Unicode Table">
+            </a>
+        </div>
+
+        <div class="carousel-item">
+            <a href="MLinstructions.html" class="cyber-glitch">
+                <img src="image_m_l.png" alt="Machine Language Instructions">
+            </a>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" data-direction="prev">‹</button>
+    <button class="carousel-control-next" data-direction="next">›</button>
+
+</div>
+
+<script src="carousel.js"></script>
 
 </body>
 </html>
