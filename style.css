@@ -308,3 +308,53 @@ html, body {
     margin-top: auto;            /* pushes button to bottom */
     display: inline-block;
 }
+
+/* --- CAROUSEL FIXES (Bootstrap compatibility) --- */
+
+/* Ensure carousel fits inside cyber-terminal */
+.cyber-terminal .carousel {
+  width: 100%;
+  max-width: 650px;
+  margin: 1.5rem auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Make slide images visible and not squished */
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Center carousel indicators */
+.carousel-indicators {
+  bottom: 10px;
+}
+
+.carousel-indicators button {
+  background-color: var(--grey);
+}
+
+.carousel-indicators .active {
+  background-color: var(--red);
+}
+
+/* Make previous/next arrows visible on dark background */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%);
+}
+
+/* Center the carousel inside the cyber-terminal text block */
+.cyber-terminal #demo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Prevent arrow buttons from shifting layout */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 8%;
+}
